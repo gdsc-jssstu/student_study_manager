@@ -30,15 +30,21 @@ The tech stack used here is,
 ## Final version of the project 
 
 Click [here](https://www.figma.com/file/2Pp9jGdVmzd1eKJFhBu4XQ/student-friendly-app?node-id=0%3A1) for the UI design and prototype of the project.
+| Home|Timetable screen|
+|--------|------|
+|![student1](https://user-images.githubusercontent.com/108210777/194768898-b324aa0a-17e9-4061-b203-8d0cb73e0156.png)|![student2](https://user-images.githubusercontent.com/108210777/194768902-ae82136a-1005-4abb-bf7a-588e6c6cc5ce.png)|
 
-![student1](https://user-images.githubusercontent.com/108210777/194768898-b324aa0a-17e9-4061-b203-8d0cb73e0156.png)
-![student2](https://user-images.githubusercontent.com/108210777/194768902-ae82136a-1005-4abb-bf7a-588e6c6cc5ce.png)
-![student3](https://user-images.githubusercontent.com/108210777/194768909-0b8e6688-f07a-4ce3-a399-309f0c731374.png)
-![student4](https://user-images.githubusercontent.com/108210777/194768913-6c149867-bfd3-442d-beb3-ce4d4ae9d726.png)
-![student5](https://user-images.githubusercontent.com/108210777/194768920-4fa388e3-c730-45fc-ae82-629f74384134.png)
-![student6](https://user-images.githubusercontent.com/108210777/194768925-530d3fbb-d5ed-43f1-b9f1-64c7f5b8e94f.png)
-![student7](https://user-images.githubusercontent.com/108210777/194768927-9745c942-025c-4112-8fa6-508f03413d06.png)
-![student8](https://user-images.githubusercontent.com/108210777/194768878-4b8e2667-9141-4f08-ab04-bffa0496ba55.png)
+| Add timetable|Reminders screen|
+|--------|------|
+|![student3](https://user-images.githubusercontent.com/108210777/195030771-a85e4300-37b8-464d-bf28-4a9a5cc368f7.png)|![student4](https://user-images.githubusercontent.com/108210777/194768913-6c149867-bfd3-442d-beb3-ce4d4ae9d726.png)|
+
+| Add reminders|Notes Screen|
+|--------|------|
+|![student5](https://user-images.githubusercontent.com/108210777/194768920-4fa388e3-c730-45fc-ae82-629f74384134.png)|![student6](https://user-images.githubusercontent.com/108210777/194768925-530d3fbb-d5ed-43f1-b9f1-64c7f5b8e94f.png)|
+
+| Add notes|Todo lists|
+|--------|------|
+|![student7](https://user-images.githubusercontent.com/108210777/195029414-cb1eef47-5af0-43dc-82a9-f42eef1aa9f1.png)|![student8](https://user-images.githubusercontent.com/108210777/194768878-4b8e2667-9141-4f08-ab04-bffa0496ba55.png)|
 
 ---
 ## Intended final project
