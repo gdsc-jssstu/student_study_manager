@@ -46,6 +46,10 @@ Click [here](https://www.figma.com/file/2Pp9jGdVmzd1eKJFhBu4XQ/student-friendly-
 |--------|------|
 |![student7](https://user-images.githubusercontent.com/108210777/195029414-cb1eef47-5af0-43dc-82a9-f42eef1aa9f1.png)|![student8](https://user-images.githubusercontent.com/108210777/194768878-4b8e2667-9141-4f08-ab04-bffa0496ba55.png)|
 
+| Add Tasks|
+|--------|
+|![student7](https://i.postimg.cc/yNbMcvRx/image.png)|
+
 ---
 ## Intended final project
 
