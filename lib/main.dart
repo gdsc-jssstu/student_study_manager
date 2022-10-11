@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:hacktober_fest_app/screens/home_screen.dart';
@@ -6,9 +5,7 @@ import 'package:hacktober_fest_app/screens/remainders_screen.dart';
 import 'package:hacktober_fest_app/screens/study_materials_screen.dart';
 import 'package:hacktober_fest_app/screens/timetables_screen.dart';
 import 'package:hacktober_fest_app/screens/todo_screen.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:path_provider/path_provider.dart' as path_provider;
 
 void main() async{
   await Hive.initFlutter();
@@ -17,7 +14,7 @@ void main() async{
   await Hive.openBox('remainders');
   await Hive.openBox('todos');
   await Hive.openBox('studyMaterials');
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

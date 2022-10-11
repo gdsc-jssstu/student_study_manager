@@ -7,15 +7,15 @@ class RemaindersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Remainder\'s"),
+        title: const Text("Remainder's"),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: (){
           //TODO:Add new remainder feature to be added
         },
       ),
-      body: Center(child: Text("Remainder\'s Screen"),),
+      body: const Center(child: Text("Remainder's Screen"),),
     );
   }
 }

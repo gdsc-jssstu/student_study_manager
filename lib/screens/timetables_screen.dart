@@ -7,14 +7,14 @@ class TimeTablesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Time-Table"),
+        title: const Text("Time-Table"),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: (){
         //TODO:Add new timetable feature to be added
       },),
-      body: Center(
+      body: const Center(
         child: Text("Time-Table Screen"),
       ),
     );

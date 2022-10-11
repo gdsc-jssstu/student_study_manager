@@ -5,14 +5,14 @@ class TodoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Todo\'s"),),
+      appBar: AppBar(title: const Text("Todo's"),),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: (){
           //TODO:Add new todo feature to be added
         },
       ),
-      body: Center(child: Text("Todo Screen"),),
+      body: const Center(child: Text("Todo Screen"),),
     );
   }
 }

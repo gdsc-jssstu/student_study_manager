@@ -7,14 +7,14 @@ class StudyMaterialsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Study Materials"),
+        title: const Text("Study Materials"),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: (){
         //TODO:Add new notes feature to be added
       },),
-      body: Center(
+      body: const Center(
         child: Text("Study Materials Screen"),
       ),
     );

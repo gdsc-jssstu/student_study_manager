@@ -11,17 +11,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Dashboard"),),
+      appBar: AppBar(title: const Text("Dashboard"),),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              HomeScreenCard(title: "Timetable\'s",onPressed: (){
+              HomeScreenCard(title: "Timetable's",onPressed: (){
                 Navigator.of(context).pushNamed(TimeTablesScreen.routeName);
               },),
-              HomeScreenCard(title: "Todo\'s",onPressed: (){
+              HomeScreenCard(title: "Todo's",onPressed: (){
                 Navigator.of(context).pushNamed(TodoScreen.routeName);
               },),
             ],
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              HomeScreenCard(title: "Remainder\'s",onPressed: (){
+              HomeScreenCard(title: "Remainder's",onPressed: (){
                 Navigator.of(context).pushNamed(RemaindersScreen.routeName);
               },),
               HomeScreenCard(title: "Study Materials",onPressed: (){
