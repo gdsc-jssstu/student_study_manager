@@ -54,3 +54,9 @@ Click [here](https://www.figma.com/file/2Pp9jGdVmzd1eKJFhBu4XQ/student-friendly-
 ## Intended final project
 
 A smart student manager which helps studentds to update timetables, todo lists, get remainders and easy access to study materials.
+
+## Contributors 
+
+<a align="center" href="https://github.com/gdsc-jssstu/student_study_manager/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gdsc-jssstu/student_study_manager&&max=817" />
+</a>
