@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class addNotesScreen extends StatelessWidget {
-  const addNotesScreen({Key? key}) : super(key: key);
+class AddNotesScreen extends StatelessWidget {
+  const AddNotesScreen({Key? key}) : super(key: key);
   static const routeName = '/add-notes-screen';
   @override
   Widget build(BuildContext context) {

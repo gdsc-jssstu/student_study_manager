@@ -3,6 +3,7 @@ import 'package:hacktober_fest_app/widgets/notes_screen_container.dart';
 import 'package:hacktober_fest_app/screens/add_notes_screen.dart';
 class StudyMaterialsScreen extends StatelessWidget {
   static const routeName = '/study-materials-screen';
+  const StudyMaterialsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +56,7 @@ class StudyMaterialsScreen extends StatelessWidget {
         onPressed: () {
           Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const addNotesScreen()),);
+              MaterialPageRoute(builder: (context) => const AddNotesScreen()),);
           //TODO:Add new notes feature to be added
         },
       ),

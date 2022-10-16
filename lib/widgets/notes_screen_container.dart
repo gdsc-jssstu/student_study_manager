@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NoteScreenCont extends StatelessWidget {
-  String title;
-  NoteScreenCont({super.key, required this.title});
+  final String title;
+  const NoteScreenCont({super.key, required this.title});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
