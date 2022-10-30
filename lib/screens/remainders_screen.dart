@@ -2,27 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class RemaindersScreen extends StatelessWidget {
+  const RemaindersScreen({Key? key}) : super(key: key);
   static const routeName='/remainders-screen';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
+        iconTheme: const  IconThemeData(
           color: Colors.black, //change your color here
         ),
          backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text("Remainder\'s",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
-        actions: [
+        title: const Text("Remainder\'s",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+        actions: const [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Icon(Icons.search,color: Colors.black,size: 25,),
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add,color: Colors.black,size: 32),
+      floatingActionButton:   FloatingActionButton(
+        child: const Icon(
+            Icons.add,color: Colors.black,
+            size: 32
+        ),
         backgroundColor: Colors.yellow[300],
         onPressed: (){
           showAdTask(context);
@@ -49,11 +53,11 @@ class RemaindersScreen extends StatelessWidget {
                    child: Column(
                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                      crossAxisAlignment: CrossAxisAlignment.start,
-                     children: [
+                     children:  [
                        Column(
                          children: [
-                           Text("Title"),
-                           Text("Para"),
+                           const   Text("Title"),
+                           const  Text("Para"),
                          ],
                        ),
                        Column(
@@ -63,12 +67,12 @@ class RemaindersScreen extends StatelessWidget {
                              width:  MediaQuery.of(context).size.width,
                              color: Colors.white,
                            ),
-                           SizedBox(height: 3,),
+                           SizedBox(height: 5,),
                            Row(
                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                              children: [
-                               Text("TODAY"),
-                               Text("6:00 PM"),
+                               const  Text("TODAY", style: TextStyle(fontStyle: FontStyle.italic),),
+                               const  Text("6:00 PM"),
                              ],
                            ),
                          ],
@@ -78,9 +82,9 @@ class RemaindersScreen extends StatelessWidget {
                    ),
                  ),
               ),
-            SizedBox(height: 20,),
-            Text("UPCOMING",style:TextStyle(fontWeight: FontWeight.bold)),
-            SizedBox(height: 3,),
+            const SizedBox(height: 20,),
+            const Text("UPCOMING",style:TextStyle(fontWeight: FontWeight.bold, fontStyle: FontStyle.italic)),
+            const SizedBox(height: 3,),
             Container(
               height: 150,
               width: MediaQuery.of(context).size.width,
@@ -96,8 +100,8 @@ class RemaindersScreen extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text("Title"),
-                        Text("Para"),
+                        const   Text("Title"),
+                        const Text("Para"),
                       ],
                     ),
                     Column(
@@ -107,12 +111,12 @@ class RemaindersScreen extends StatelessWidget {
                           width:  MediaQuery.of(context).size.width,
                           color: Colors.white,
                         ),
-                        SizedBox(height: 3,),
+                        const  SizedBox(height: 3,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("TODAY"),
-                            Text("6:00 PM"),
+                            const   Text("TODAY", style: TextStyle(fontStyle: FontStyle.italic),),
+                            const   Text("6:00 PM"),
                           ],
                         ),
                       ],
@@ -160,7 +164,7 @@ void showAdTask(context) {
                    controller: para,
                    keyboardType: TextInputType.multiline,
                    maxLines: null,
-                   decoration: new InputDecoration.collapsed(
+                   decoration: const InputDecoration.collapsed(
                        hintText: 'Type here..',
                    ),
                  ),
@@ -168,7 +172,7 @@ void showAdTask(context) {
              ],
            ),
           ),
-          SizedBox(height: 18,),
+          const SizedBox(height: 18,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -179,7 +183,7 @@ void showAdTask(context) {
                   borderRadius: BorderRadius.circular(15),
                   color: Colors.grey[300],
                 ),
-                child: Center(child: Text("Set Date",style: TextStyle(fontSize: 15),)),
+                child: const Center(child: Text("Set Date",style: TextStyle(fontSize: 15),)),
 
               ),
               Container(
@@ -189,7 +193,7 @@ void showAdTask(context) {
                   borderRadius: BorderRadius.circular(15),
                   color: Colors.grey[300],
                 ),
-                child: Center(child: Text("Set Time",style: TextStyle(fontSize: 15),)),
+                child: const Center(child: Text("Set Time",style: TextStyle(fontSize: 15),)),
               ),
             ],
           ),
@@ -201,9 +205,9 @@ void showAdTask(context) {
             Navigator.pop(context);
           },
           color: Colors.yellow[300],
-          child: Text(
+          child: const Text(
             "+",
-            style: TextStyle(color: Colors.black, fontSize: 35, fontWeight: FontWeight.bold),
+            style:  TextStyle(color: Colors.black, fontSize: 35, fontWeight: FontWeight.bold),
           ),
         )
       ]).show();
