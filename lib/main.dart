@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:hacktober_fest_app/providers/study_materials.dart';
 import 'package:hacktober_fest_app/providers/time_table.dart';
+import 'package:hacktober_fest_app/providers/todo.dart';
 import 'package:hacktober_fest_app/screens/home_screen.dart';
 import 'package:hacktober_fest_app/screens/remainders_screen.dart';
 import 'package:hacktober_fest_app/screens/study_materials_screen.dart';
@@ -22,9 +23,10 @@ void main() async {
   Hive.init(directory.path);
   Hive.registerAdapter<TimeTable>(TimeTableAdapter());
   Hive.registerAdapter<StudyMaterial>(StudyMaterialAdapter());
+  Hive.registerAdapter<Todo>(TodoAdapter());
   await Hive.openBox<TimeTable>('timeTables');
   await Hive.openBox('remainders');
-  await Hive.openBox('todos');
+  await Hive.openBox<Todo>('todos');
   await Hive.openBox<StudyMaterial>('studyMaterials');
 
   runApp(MyApp());
