@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hacktober_fest_app/providers/study_materials.dart';
+import 'package:hacktober_fest_app/screens/view_study_materials.dart';
 import 'package:hacktober_fest_app/widgets/notes_screen_container.dart';
 import 'package:hacktober_fest_app/screens/add_notes_screen.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'dart:io';
+
 class StudyMaterialsScreen extends StatelessWidget {
   static const routeName = '/study-materials-screen';
   const StudyMaterialsScreen({super.key});
@@ -55,34 +61,70 @@ class StudyMaterialsScreen extends StatelessWidget {
         child: Icon(Icons.add),
         onPressed: () {
           Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const AddNotesScreen()),);
+            context,
+            MaterialPageRoute(builder: (context) => const AddNotesScreen()),
+          );
           //TODO:Add new notes feature to be added
         },
       ),
-      body: SingleChildScrollView(
+      // body: SingleChildScrollView(
 
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding:  EdgeInsets.only(left: 32.0),
-              child:  Text(
-                "SUBJECTS",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w600 ,
-                ),
-              ),
-            ),
+      //   child: Column(
+      //     crossAxisAlignment: CrossAxisAlignment.start,
+      //     children: [
+      //       const Padding(
+      //         padding:  EdgeInsets.only(left: 32.0),
+      //         child:  Text(
+      //           "SUBJECTS",
+      //           style: TextStyle(
+      //             fontSize: 20,
+      //             fontStyle: FontStyle.italic,
+      //             fontWeight: FontWeight.w600 ,
+      //           ),
+      //         ),
+      //       ),
 
-            NoteScreenCont(title: "A"),
-            NoteScreenCont(title: "B"),
-            NoteScreenCont(title: "C"),
-            NoteScreenCont(title: "D"),
-            NoteScreenCont(title: "E"),
-          ],
+      //   NoteScreenCont(title: "A"),
+      //   NoteScreenCont(title: "B"),
+      //   NoteScreenCont(title: "C"),
+      //   NoteScreenCont(title: "D"),
+      //   NoteScreenCont(title: "E"),
+      // ],
+
+      body: SafeArea(
+        child: ValueListenableBuilder(
+          valueListenable:
+              Hive.box<StudyMaterial>('studymaterials').listenable(),
+          builder: (context, Box<StudyMaterial> box, _) {
+            return ListView.builder(
+              itemCount: box.length,
+              itemBuilder: (ctx, i) {
+                final studymaterial = box.getAt(i);
+                return Card(
+                  color: Colors.blue,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (ctx) => ViewStudyMaterial(
+                                filePath: studymaterial!.filePath,
+                                filename: studymaterial.fileName.toString())));
+                      },
+                      title: Text(studymaterial!.fileName.toString()),
+                      contentPadding: const EdgeInsets.only(left: 160),
+                      trailing: IconButton(
+                        onPressed: () {
+                          box.deleteAt(i);
+                        },
+                        icon: const Icon(Icons.delete),
+                      ),
+                    ),
+                  ),
+                );
+              },
+            );
+          },
         ),
       ),
     );

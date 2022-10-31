@@ -14,7 +14,7 @@ class ViewTimeTable extends StatelessWidget {
       appBar: AppBar(title: Text(title.toString())),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(18.0),
           child: Image.file(File(imagePath!)),
         ),
       ),
