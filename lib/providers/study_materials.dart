@@ -6,7 +6,7 @@ import 'package:hive_flutter/adapters.dart';
 
 part 'study_materials.g.dart';
 
-@HiveType(typeId: 0)
+@HiveType(typeId: 1)
 class StudyMaterial extends HiveObject {
   @HiveField(0)
   String? fileName;

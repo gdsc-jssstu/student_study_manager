@@ -8,7 +8,7 @@ part of 'study_materials.dart';
 
 class StudyMaterialAdapter extends TypeAdapter<StudyMaterial> {
   @override
-  final int typeId = 0;
+  final int typeId = 1;
 
   @override
   StudyMaterial read(BinaryReader reader) {
